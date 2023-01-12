@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+/* --------------- header ---------------- */
+
+.header-global{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10%;
+  background-color: black;
+}
+.header-global img{
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+.header-global form{
+  width: 100%;
+}
+.header-global form .search-content{
+  display: flex;
+  flex-direction: row;
+  align-items:center ;
+  height: 38px;
+  border-radius: 35px;
+  padding: 0 0 0 15px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+.header-global form .search{
+  width: 100%;
+  border: none;
+  margin-right: 8px;
+  outline: 0;
+  font-size: 15px;
+  height: 100%;
+  display: block;
+}
+.header-global form .search-content button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-size: 18px;
+  color: #808080;
+  transition: all ease .3s;
+}
+.header-global form .search-content button i{
+  transition: all ease .3s;
+}
+.header-global form .search-content button:hover{
+  background-color: #dddddd;
+}
+.header-global form .search-content button:hover i{
+  transform: scale(1.3);
+  color: black;
+}
+
+/* ----------------- menu ----------------------- */
+
+
+.nav-global{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+}
+
+.nav-global ul{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-global ul li a{
+  color: black;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  height: 100%;
+  display: block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+  transition: all .3s ease;
+}
+.nav-global ul li a i{
+  margin-right: 10px;
+  font-size: 17px;
+}
+.nav-global ul li a:hover{
+  background-color: white;
+}
+
+/*  ------------------------ banner ganhar fazendo o que ama ---------------------- */
+
+.banner{
+  height: 80vh;
+  width: 100%;
+  background-image: url("../img/capa.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.banner .gradient{
+  height: inherit;
+  width: inherit;
+  background: linear-gradient(to left, transparent 0, rgba(0,0,0,0) 30%, rgba(0, 0, 0,0.8) 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10%;
+
+  position: relative;
+}
+.banner .gradient .title-reader{
+  font-size: 3.7em;
+  margin-top: 10%;
+  text-transform: uppercase;
+  transition: all .4s ease;
+  position: absolute;
+  left: -500px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.banner .gradient .title-reader .frase{
+  font-size: 18px;
+  text-transform: none;
+  font-weight: 400;
+  opacity: 1;
+}
+.banner .gradient .title-reader.active{
+  left: 10%;
+  opacity: 1;
+}
+
+/* -------------------------------- sub-menu ----------------------------- */
+
+.sub-menu{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EEEEEE;
+}
+.sub-menu ul{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.sub-menu ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  margin: 0 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sub-menu ul li i{
+  font-size: 19px;
+  margin-right: 10px;
+}
+
+
+/*  --------------------------- conteúdo ------------------------------- */
+
+
+#main-geral{
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main-geral h2{
+  font-weight: 400;
+  margin-top: 80px;
+  font-size: 2.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#main-geral h2::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 55%;
+  background-color: black;
+  margin-top: 30px;
+}
+#main-geral .container-cursos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#main-geral .container-cursos .card{
+  width: 30%;
+  height: 400px;
+  margin-top: 45px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#main-geral .container-cursos .card img{
+  width: 100%;
+  min-height: 70%;
+  object-fit: cover;
+}
+#main-geral .container-cursos .card:hover{
+  transform: scale(1.02);
+}
+#main-geral .container-cursos .card strong{
+  margin-top: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(61, 61, 61);
+}
+#main-geral .container-cursos .card a{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  width: 55%;
+  height: 32px;
+  border-radius: 30px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+#main-geral .container-cursos .card a:hover{
+  background-color: transparent;
+  border: 1px black solid;
+  color: black;
+  font-weight: 500;
+}
+
+/* ------------------------ invista em você ------------------------------- */
+
+.parallax-image{
+  height: 80vh;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../img/criatividade.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.parallax-image h1{
+  text-transform: uppercase;
+  color: white;
+  font-size: 5em;
+}
+.parallax-image h3,
+.parallax-image h1{
+  text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+}
+.parallax-image h3{
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.8em;
+  margin-top: 7px;
+}
+
+/* --------------------------------- footer ------------------------------------ */
+
+.footer-global{
+  margin-top: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255,0.7);
+  background-color: black;
+}
+.footer-global .content{
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.footer-global .content .column-logo{
+  height:350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer-global .content .column-logo p{
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: rgba(255, 255, 255,0.7);
+  font-size: 14px;
+  text-align: justify;
+}
+.footer-global .content .column-logo img{
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+}
+.footer-global .content .column-middle p,
+.footer-global .content .column-first p{
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.footer-global .content .column-middle a,
+.footer-global .content .column-first a{
+  font-size: 15px;
+  color: rgba(255, 255, 255,0.7);
+}
+
+.footer-global .content .column-first{
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255,0.7);
+}
+.footer-global .content .column-first .politicas{
+  margin-top: 5px;
+  color: rgba(255, 255, 255,0.7);
+}
+.footer-global .content .column-middle a i{
+  font-size: 17px;
+  margin-right: 10px;
+}
+.footer-global .content .column{
+  width: 32%;
+}
+.footer-global .content-dev{
+  background-color: rgba(53, 53, 53, 0.5);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-direction: column;
+}
