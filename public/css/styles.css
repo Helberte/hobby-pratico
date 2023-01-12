@@ -20,13 +20,18 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 5% 0 10% ;
+  padding: 0 10% 0 10% ;
   background-color: black;
+  justify-content: center;
+
+  position: relative;
 }
 .header-global img{
   height: 100%;
   width: 100px;
   object-fit: cover;
+  position: absolute;
+  left: 10%;
 }
 .header-global form{
   width: 80%;
@@ -80,7 +85,6 @@ body{
   color: white;
   font-size: 27px;
   display: none;
-  z-index: 100;
   cursor: pointer;
   transition: all ease .3s;
 }
@@ -97,6 +101,16 @@ body{
   justify-content: center;
   align-items: center;
   background-color: #EEEEEE;
+}
+
+.nav-global i{
+  font-size: 30px;
+  cursor: pointer;
+  transition: all ease .3s;
+  display: none;
+}
+.nav-global i:hover{
+  transform: scale(1.15);
 }
 
 .nav-global ul{
@@ -165,6 +179,7 @@ body{
   text-transform: none;
   font-weight: 400;
   opacity: 1;
+  transition: all 1s ease;
 }
 .banner .gradient .title-reader.active{
   left: 10%;
@@ -395,10 +410,15 @@ body{
 @media(max-width: 1120px){
   .header-global .menu-amburguer{
     display: block;
+    position: absolute;
+    right: 10%;
   }
 
   .header-global{
-    justify-content: space-between;
+    justify-content: center;
+  }
+  .header-global form{
+    width: 70%;
   }
   .header-global form .search-content{
     margin-left: 0;
@@ -435,8 +455,268 @@ body{
   .nav-global ul li a i{
     display: none;
   }
-  
+  .nav-global i{
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 10%;
+  }
+
+  .gradient .title-reader{
+    font-size: 3em!important;
+  }
+  .gradient .frase{
+    font-size: 15px;
+  }
+  .sub-menu ul li{
+    font-size: 12px;
+    padding: 0 10px;
+  }
+  #main-geral h2{
+    font-size: 1.7em;
+  }
+  #main-geral{
+    max-width: 850px;
+  }
+  .container-cursos .card{
+    height: 350px!important;
+  }
+  .container-cursos .card strong{
+    font-size: 15px!important;
+  }
+  .container-cursos .card a{
+    height: 28px;
+    font-size: 15px;
+  }
+  .parallax-image h1{
+    font-size: 4em;
+  }
+  .parallax-image h3{
+    font-size: 1.4em;
+  }
+  .footer-global .content{
+    padding: 20px 2%;
+  }
+  .footer-global .content .column-logo{
+    width: 45%;
+  }
+  .footer-global .content .column-middle,
+  .footer-global .content .column-first{
+    width: 27.5%;
+  }
 }
+
+@media (max-width: 956px){
+  .sub-menu ul li{
+    padding: 0;
+    margin: 0 25px;
+  }    
+}
+
+@media (max-width: 898px){
+  .header-global img{
+    left: 5%;
+  }
+  #main-geral{
+    max-width: 700px;
+  }
+  .header-global .menu-amburguer{
+    right: 5%;
+  }
+  .gradient .title-reader{
+    font-size: 2.7em!important;
+  }
+  #main-geral{
+    max-width: 700px;
+  }
+  .container-cursos .card{
+    height: 300px!important;
+  }
+  .parallax-image h1{
+    font-size: 3em;
+  }
+  .parallax-image h3{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 844px){
+  .sub-menu ul li{
+    margin: 0 10px;
+  }    
+}
+@media (max-width: 741px){
+  .sub-menu{
+    height: auto;
+  }
+  .sub-menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .sub-menu ul li{
+    margin: 12px 0;
+  }
+  .banner .gradient .title-reader.active {
+    left: 6%;
+    opacity: 1;
+  }
+  #main-geral .container-cursos .card{
+    width: 230px;
+  }
+  #main-geral{
+    max-width: 500px;
+  }
+  #main-geral h2{
+    font-size: 1.4em;
+  }
+  .container-cursos .card{
+    height: 330px!important;
+  }
+  .footer-global .content .column-logo p{
+    font-size: 10px;
+  }
+  .footer-global .content .column-middle p,
+  .footer-global .content .column-first p{
+    font-size: 15px;
+  }
+  .footer-global .content .column-middle a,
+  .footer-global .content .column-first a{
+    font-size: 12px;
+  }
+}
+
+@media (max-width:624px){
+  .header-global form{
+    width: 60%;
+    
+  }
+}
+@media (max-width:544px){
+  .header-global form{
+    position: absolute;
+    bottom: -50px;
+    z-index: 10;
+    width: 90%;
+  }
+  .gradient .title-reader{
+    font-size: 2.3em!important;
+  }
+  .gradient .frase{
+    font-size: 15px!important;
+  }
+  #main-geral{
+    max-width: 430px;
+  }
+  #main-geral .container-cursos .card{
+    width: 200px;
+    height: 285px!important;
+  }
+  #main-geral .container-cursos .card strong{
+    font-size: 13px!important;
+    margin-top: 15px;
+  }
+  #main-geral .container-cursos .card a{
+    font-size: 13px!important;
+    height: 30px;
+  }
+  #main-geral h2 {
+    font-size: 1.2em;
+  }
+  .parallax-image h1 {
+    font-size: 2.5em;
+  }
+  .parallax-image h3 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width:476px){
+  #main-geral {
+    max-width: 80%;
+  }
+  #main-geral .container-cursos {
+    flex-direction: column;  
+  }
+  #main-geral h2 {
+    font-size: 1.02em;
+    margin-top: 40px;
+  }
+  #main-geral h2::after{
+    width: 40%;  
+  }
+  #main-geral .container-cursos .card{
+    margin-top: 25px;
+    width: 230px;
+    height: 320px!important;
+  }
+  #main-geral .container-cursos .card a{
+    margin-top: 15px;
+  }
+  .footer-global .content{
+    flex-direction: column;
+  }
+  .footer-global .content .column-logo {
+    width: 80%;
+    height: 280px;
+  }
+  .footer-global .content .column-first {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  .footer-global .content .column-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width:444px){
+  #main-geral h2 span{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      text-align: center;
+  }
+  #main-geral .main-geral-saiba-mais{
+    font-size: 1em;
+    text-align: center;
+  }
+  .parallax-image h1 {
+    font-size: 2.2em;
+    text-align: center;
+  }
+  
+  .footer-global .content-dev{
+    font-size: 9px;
+    text-align: center;
+  }
+}
+
+@media(max-width:384px){
+  .gradient .title-reader {
+    font-size: 2.1em!important;
+  }
+  .banner .gradient .title-reader.active {
+    left: 0;
+    opacity: 1;
+    width: 100%;    
+    text-align: center;
+  }
+}
+@media (max-width:294px){
+  .header-global form .search{
+    font-size: 14px;
+  }
+}
+
 .nav-global.active{
   opacity: 0.8;
   top: 0;

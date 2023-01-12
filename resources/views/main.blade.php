@@ -83,7 +83,7 @@
 
     <main id="main-geral">    
 
-        <h2><span> <strong>Clique em</strong> "Saiba mais" para conferir os preços</span></h2>        
+        <h2 class="main-geral-saiba-mais"><span> <strong>Clique em</strong> "Saiba mais" para conferir os preços</span></h2>        
         
         <div class="container-cursos">
             <div class="card">
