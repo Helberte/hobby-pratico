@@ -9,4 +9,7 @@
       <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>   
   </form>
+  <span id="menu-amburguer" class="menu-amburguer">
+    <i class="fa-solid fa-bars"></i>
+  </span>
 </header>
