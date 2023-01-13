@@ -710,6 +710,10 @@ body{
     width: 100%;    
     text-align: center;
   }
+  .banner .gradient .title-reader .frase{
+    padding: 0 15px;
+    font-size: 12px!important;
+  }
 }
 @media (max-width:294px){
   .header-global form .search{
