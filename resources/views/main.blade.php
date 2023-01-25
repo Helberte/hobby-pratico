@@ -27,55 +27,25 @@
         <h2> <span> <strong>Super Ofertas</strong> Cursos com preços imperdíveis</span></h2>        
 
         <div class="container-cursos">
-            <div class="card">
-                <img src="img/cursos/design_unhas.png" alt="Curso design de unhas">
 
-                <strong>Designer de unhas</strong>
+            @if(count($cursos) == 0)
+                <p>Nenhum curso cadastrado ainda</p>
 
-                <a href="#">Saiba mais</a>
-            </div>
+            @else
+                @foreach($cursos as $curso)
+                    <div class="card">
+                        <img src="img/cursos/{{ $curso->image }}" alt="{{ $curso->nome }}">
 
-            <div class="card">
-                <img src="img/cursos/curso_de_fotografia.png" alt="Curso design de Fotografia">
+                        <strong>{{ $curso->nome }}</strong>
 
-                <strong>Creator Designer gráfico</strong>
-
-                <a href="#">Saiba mais</a>
-            </div>
-
-            <div class="card">
-                <img src="img/cursos/design_unhas.png" alt="Curso design de unhas">
-
-                <strong>Designer de unhas</strong>
-
-                <a href="#">Saiba mais</a>
-            </div>
-
-            <div class="card">
-                <img src="img/cursos/design_unhas.png" alt="Curso design de unhas">
-
-                <strong>Designer de unhas</strong>
-
-                <a href="#">Saiba mais</a>
-            </div>
-
-            <div class="card">
-                <img src="img/cursos/design_unhas.png" alt="Curso design de unhas">
-
-                <strong>Designer de unhas</strong>
-
-                <a href="#">Saiba mais</a>
-            </div>
-
-            <div class="card">
-                <img src="img/cursos/design_unhas.png" alt="Curso design de unhas">
-
-                <strong>Designer de unhas</strong>
-
-                <a href="#">Saiba mais</a>
-            </div>
+                        <a href="{{ $curso->url }}">Saiba mais</a>
+                    </div>
+                @endforeach
+            @endif
+            
         </div> <!-- container-cursos -->
     </main>
+
     <div class="parallax-image">
         <h1>Invista em você</h1>
         <h3>Compras parceladas</h3>
